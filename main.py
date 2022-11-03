@@ -1,8 +1,10 @@
-print("Welcome to Shiggy's Hangman Game!")
 import random
 from replit import clear
-words = ["otilo", "boobies", "niggas", "thots", "tricks", "bitches", "wylin", "kristal", "henny"]
-chosen_word=random.choice(words)
+from wordlist import word_library
+
+print("Welcome to Shiggy's Hangman Game!")
+
+chosen_word=random.choice(word_library)
 underscore = "_"
 display = []
 word_length=(len(chosen_word))
@@ -80,6 +82,6 @@ while not end_of_game:
     print ("You win!")
   if lives==0:
     end_of_game = True
-    print ("You lose bitch")
+    print ("You lose!")
   else:
     lives=lives
